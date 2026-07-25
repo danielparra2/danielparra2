@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="400" height="250">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d1a"/>
+      <stop offset="100%" style="stop-color:#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="evoGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4ff"/>
+      <stop offset="33%" style="stop-color:#7b2cbf"/>
+      <stop offset="66%" style="stop-color:#ff006e"/>
+      <stop offset="100%" style="stop-color:#00d4ff"/>
+    </linearGradient>
+    <filter id="glow3"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="400" height="250" fill="url(#bg3)"/>
+  <!-- Grid -->
+  <g stroke="#1a1a2e" stroke-width="0.5">
+    <line x1="50" y1="50" x2="350" y2="50"/><line x1="50" y1="90" x2="350" y2="90"/>
+    <line x1="50" y1="130" x2="350" y2="130"/><line x1="50" y1="170" x2="350" y2="170"/>
+    <line x1="50" y1="210" x2="350" y2="210"/>
+    <line x1="50" y1="50" x2="50" y2="210"/><line x1="125" y1="50" x2="125" y2="210"/>
+    <line x1="200" y1="50" x2="200" y2="210"/><line x1="275" y1="50" x2="275" y2="210"/>
+    <line x1="350" y1="50" x2="350" y2="210"/>
+  </g>
+  <!-- Time evolution heatmap simulation -->
+  <g filter="url(#glow3)">
+    <rect x="50" y="50" width="75" height="160" fill="url(#evoGrad)" fill-opacity="0.8">
+      <animate attributeName="fill-opacity" values="0.8;0.3;0.8" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="125" y="50" width="75" height="160" fill="url(#evoGrad)" fill-opacity="0.6">
+      <animate attributeName="fill-opacity" values="0.6;0.9;0.6" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="200" y="50" width="75" height="160" fill="url(#evoGrad)" fill-opacity="0.7">
+      <animate attributeName="fill-opacity" values="0.7;0.4;0.7" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="275" y="50" width="75" height="160" fill="url(#evoGrad)" fill-opacity="0.5">
+      <animate attributeName="fill-opacity" values="0.5;0.8;0.5" dur="2s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <!-- Wavefunction snapshots at different times -->
+  <g font-family="'JetBrains Mono',monospace" font-size="8" fill="#7b2cbf" opacity="0.7">
+    <text x="87" y="45" text-anchor="middle">t=0</text>
+    <text x="162" y="45" text-anchor="middle">t=Δt</text>
+    <text x="237" y="45" text-anchor="middle">t=2Δt</text>
+    <text x="312" y="45" text-anchor="middle">t=3Δt</text>
+  </g>
+  <!-- Schrödinger equation -->
+  <text x="200" y="25" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="13" fill="#00d4ff" font-weight="bold">
+    Evolución Temporal · Ecuación de Schrödinger TDSE
+  </text>
+  <text x="200" y="235" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10" fill="#ff006e" opacity="0.7">
+    iℏ ∂ψ/∂t = Ĥψ · ψ(x,t) = Σ cₙ φₙ(x) e^(-iEₙt/ℏ)
+  </text>
+  <!-- Color bar legend -->
+  <defs>
+    <linearGradient id="colorbar" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4ff"/>
+      <stop offset="50%" style="stop-color:#7b2cbf"/>
+      <stop offset="100%" style="stop-color:#ff006e"/>
+    </linearGradient>
+  </defs>
+  <rect x="360" y="50" width="15" height="160" fill="url(#colorbar)"/>
+  <text x="380" y="130" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="8" fill="#7b2cbf" transform="rotate(-90,380,130)">
+    |ψ|²
+  </text>
+  <!-- Coming soon badge -->
+  <rect x="130" y="110" width="140" height="30" rx="5" fill="#1a1a2e" stroke="#00d4ff" stroke-width="1.5" opacity="0.9"/>
+  <text x="200" y="132" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11" fill="#00d4ff" font-weight="bold">
+    🚧 Manim Pending
+  </text>
+</svg>

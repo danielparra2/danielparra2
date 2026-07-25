@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="400" height="250">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d1a"/>
+      <stop offset="100%" style="stop-color:#1a1a2e"/>
+    </linearGradient>
+    <radialGradient id="dotGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00d4ff"/>
+      <stop offset="70%" style="stop-color:#7b2cbf"/>
+      <stop offset="100%" style="stop-color:#1a1a2e" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="impGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ff006e"/>
+      <stop offset="60%" style="stop-color:#fb5607"/>
+      <stop offset="100%" style="stop-color:#1a1a2e" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="pulse"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glow4"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="400" height="250" fill="url(#bg4)"/>
+  <!-- Quantum dots chain -->
+  <g filter="url(#glow4)">
+    <!-- Dot 1 -->
+    <circle cx="80" cy="125" r="25" fill="url(#dotGrad)" opacity="0.9">
+      <animate attributeName="r" values="25;28;25" dur="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.9;0.6;0.9" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Dot 2 -->
+    <circle cx="160" cy="125" r="25" fill="url(#dotGrad)" opacity="0.9">
+      <animate attributeName="r" values="25;28;25" dur="1.5s" repeatCount="indefinite" begin="0.2s"/>
+      <animate attributeName="opacity" values="0.9;0.6;0.9" dur="1.5s" repeatCount="indefinite" begin="0.2s"/>
+    </circle>
+    <!-- Dot 3 (with impurity) -->
+    <circle cx="240" cy="125" r="25" fill="url(#dotGrad)" opacity="0.9">
+      <animate attributeName="r" values="25;28;25" dur="1.5s" repeatCount="indefinite" begin="0.4s"/>
+      <animate attributeName="opacity" values="0.9;0.6;0.9" dur="1.5s" repeatCount="indefinite" begin="0.4s"/>
+    </circle>
+    <!-- Impurity at dot 3 -->
+    <circle cx="240" cy="125" r="12" fill="url(#impGrad)" filter="url(#pulse)" opacity="0.8">
+      <animate attributeName="r" values="12;16;12" dur="1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0.4;0.8" dur="1s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Dot 4 -->
+    <circle cx="320" cy="125" r="25" fill="url(#dotGrad)" opacity="0.9">
+      <animate attributeName="r" values="25;28;25" dur="1.5s" repeatCount="indefinite" begin="0.6s"/>
+      <animate attributeName="opacity" values="0.9;0.6;0.9" dur="1.5s" repeatCount="indefinite" begin="0.6s"/>
+    </circle>
+    <!-- Coupling lines -->
+    <line x1="105" y1="125" x2="135" y2="125" stroke="#00d4ff" stroke-width="2" stroke-dasharray="8,4" opacity="0.5">
+      <animate attributeName="stroke-dashoffset" values="0;20" dur="1s" repeatCount="indefinite"/>
+    </line>
+    <line x1="185" y1="125" x2="215" y2="125" stroke="#7b2cbf" stroke-width="2" stroke-dasharray="8,4" opacity="0.5">
+      <animate attributeName="stroke-dashoffset" values="0;20" dur="1s" repeatCount="indefinite"/>
+    </line>
+    <line x1="265" y1="125" x2="295" y2="125" stroke="#ff006e" stroke-width="2.5" stroke-dasharray="6,3" opacity="0.7">
+      <animate attributeName="stroke-dashoffset" values="0;20" dur="0.8s" repeatCount="indefinite"/>
+    </line>
+  </g>
+  <!-- Electron wavefunction envelope -->
+  <path d="M55,125 Q80,90 160,90 Q240,90 240,125 Q240,160 160,160 Q80,160 55,125" 
+        fill="none" stroke="url(#dotGrad)" stroke-width="1.5" stroke-dasharray="10,5" opacity="0.4" filter="url(#glow4)">
+    <animate attributeName="stroke-dashoffset" values="0;50" dur="3s" repeatCount="indefinite"/>
+  </path>
+  <!-- Labels -->
+  <g font-family="'JetBrains Mono',monospace" font-size="10" fill="#7b2cbf" opacity="0.8">
+    <text x="80" y="175" text-anchor="middle">QD₁</text>
+    <text x="160" y="175" text-anchor="middle">QD₂</text>
+    <text x="240" y="175" text-anchor="middle">QD₃*</text>
+    <text x="320" y="175" text-anchor="middle">QD₄</text>
+  </g>
+  <text x="240" y="95" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9" fill="#ff006e" font-weight="bold">
+    ★ Impureza Donadora
+  </text>
+  <!-- Hamiltonian -->
+  <text x="200" y="25" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="13" fill="#00d4ff" font-weight="bold">
+    Cadena Lineal de Puntos Cuánticos · Impureza Donadora
+  </text>
+  <text x="200" y="235" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10" fill="#fb5607" opacity="0.7">
+    Ĥ = Σ εᵢcᵢ†cᵢ + Σ tᵢⱼ(cᵢ†cⱼ + h.c.) + V_imp|3⟩⟨3|
+  </text>
+  <!-- Optoelectronic properties -->
+  <g font-family="'JetBrains Mono',monospace" font-size="9" fill="#00d4ff" opacity="0.6">
+    <text x="50" y="30" text-anchor="start">Absorción</text>
+    <text x="350" y="30" text-anchor="end">Emisión</text>
+  </g>
+  <!-- Coming soon badge -->
+  <rect x="130" y="100" width="140" height="30" rx="5" fill="#1a1a2e" stroke="#ff006e" stroke-width="1.5" opacity="0.9"/>
+  <text x="200" y="122" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11" fill="#ff006e" font-weight="bold">
+    🚧 Manim Pending
+  </text>
+</svg>

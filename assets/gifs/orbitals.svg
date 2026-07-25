@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#050510"/>
+      <stop offset="100%" style="stop-color:#0d0d1a"/>
+    </linearGradient>
+    <radialGradient id="orbital1s" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00d4ff" stop-opacity="0.9"/>
+      <stop offset="60%" style="stop-color:#7b2cbf" stop-opacity="0.5"/>
+      <stop offset="100%" style="stop-color:#0d0d1a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbital2s" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ff006e" stop-opacity="0.8"/>
+      <stop offset="40%" style="stop-color:#0d0d1a" stop-opacity="0"/>
+      <stop offset="60%" style="stop-color:#7b2cbf" stop-opacity="0.6"/>
+      <stop offset="100%" style="stop-color:#0d0d1a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbital2p" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#fb5607" stop-opacity="0.9"/>
+      <stop offset="35%" style="stop-color:#0d0d1a" stop-opacity="0"/>
+      <stop offset="65%" style="stop-color:#ff006e" stop-opacity="0.7"/>
+      <stop offset="100%" style="stop-color:#0d0d1a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="orbGlow"><feGaussianBlur stdDeviation="5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="rotateAnim"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg5)"/>
+  <!-- Central nucleus -->
+  <circle cx="200" cy="150" r="8" fill="#ff006e" filter="url(#orbGlow)">
+    <animate attributeName="r" values="8;10;8" dur="1s" repeatCount="indefinite"/>
+  </circle>
+  <!-- 1s orbital -->
+  <g transform="translate(100,150)" filter="url(#orbGlow)">
+    <circle cx="0" cy="0" r="35" fill="url(#orbital1s)" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;0.4;0.7" dur="2s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="20s" repeatCount="indefinite"/>
+    </circle>
+    <text x="0" y="75" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10" fill="#00d4ff" font-weight="bold">1s</text>
+  </g>
+  <!-- 2s orbital -->
+  <g transform="translate(200,150)" filter="url(#orbGlow)">
+    <circle cx="0" cy="0" r="50" fill="url(#orbital2s)" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.3;0.6" dur="2.5s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="15s" repeatCount="indefinite"/>
+    </circle>
+    <text x="0" y="95" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10" fill="#ff006e" font-weight="bold">2s</text>
+  </g>
+  <!-- 2p orbitals (three lobes) -->
+  <g transform="translate(300,150)" filter="url(#orbGlow)">
+    <ellipse cx="-40" cy="0" rx="35" ry="20" fill="url(#orbital2p)" opacity="0.6" transform="rotate(-60,-40,0)">
+      <animate attributeName="opacity" values="0.6;0.3;0.6" dur="1.8s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="40" cy="0" rx="35" ry="20" fill="url(#orbital2p)" opacity="0.6" transform="rotate(60,40,0)">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="1.8s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="0" cy="0" rx="20" ry="35" fill="url(#orbital2p)" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.3;0.6" dur="1.8s" repeatCount="indefinite" begin="0.6s"/>
+    </ellipse>
+    <text x="0" y="95" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10" fill="#fb5607" font-weight="bold">2p</text>
+  </g>
+  <!-- 3d orbital hint -->
+  <g transform="translate(200,150)" filter="url(#orbGlow)" opacity="0.3">
+    <ellipse cx="0" cy="0" rx="70" ry="25" fill="none" stroke="#7b2cbf" stroke-width="1" stroke-dasharray="8,4">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="10s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="0" cy="0" rx="25" ry="70" fill="none" stroke="#7b2cbf" stroke-width="1" stroke-dasharray="8,4">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="10s" repeatCount="indefinite"/>
+    </ellipse>
+    <text x="0" y="115" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9" fill="#7b2cbf" opacity="0.7">3d (implícito)</text>
+  </g>
+  <!-- Schrödinger equation for H-like atoms -->
+  <text x="200" y="25" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="13" fill="#00d4ff" font-weight="bold">
+    Órbitales Atómicos H-like · Ecuación de Schrödinger 3D
+  </text>
+  <text x="200" y="285" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10" fill="#7b2cbf" opacity="0.7">
+    [-(ℏ²/2m)∇² - Ze²/r] ψₙₗₘ(r,θ,φ) = Eₙ ψₙₗₘ · Eₙ = -13.6 Z²/n² eV
+  </text>
+  <!-- Coming soon badge -->
+  <rect x="130" y="120" width="140" height="30" rx="5" fill="#0d0d1a" stroke="#fb5607" stroke-width="1.5" opacity="0.9"/>
+  <text x="200" y="142" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11" fill="#fb5607" font-weight="bold">
+    🚧 Manim Pending
+  </text>
+</svg>

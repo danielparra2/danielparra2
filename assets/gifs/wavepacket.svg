@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="400" height="250">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d1a"/>
+      <stop offset="100%" style="stop-color:#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4ff"/>
+      <stop offset="50%" style="stop-color:#7b2cbf"/>
+      <stop offset="100%" style="stop-color:#ff006e"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="400" height="250" fill="url(#bg)"/>
+  <!-- Axes -->
+  <line x1="50" y1="200" x2="350" y2="200" stroke="#333" stroke-width="1"/>
+  <line x1="50" y1="50" x2="50" y2="200" stroke="#333" stroke-width="1"/>
+  <!-- Gaussian wave packet evolution -->
+  <g filter="url(#glow)">
+    <path d="M50,200 Q100,180 150,120 Q200,60 250,120 Q300,180 350,200" 
+          fill="url(#waveGrad)" fill-opacity="0.3" stroke="url(#waveGrad)" stroke-width="2">
+      <animate attributeName="d" 
+        values="M50,200 Q100,180 150,120 Q200,60 250,120 Q300,180 350,200;
+                M50,200 Q110,185 160,130 Q210,75 260,130 Q310,185 350,200;
+                M50,200 Q120,190 170,145 Q220,95 270,145 Q320,190 350,200;
+                M50,200 Q110,185 160,130 Q210,75 260,130 Q310,185 350,200;
+                M50,200 Q100,180 150,120 Q200,60 250,120 Q300,180 350,200"
+        dur="4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+    </path>
+    <!-- Envelope -->
+    <path d="M50,200 Q100,180 150,120 Q200,60 250,120 Q300,180 350,200" 
+          fill="none" stroke="#00d4ff" stroke-width="1" stroke-dasharray="4,4" opacity="0.5">
+      <animate attributeName="stroke-dashoffset" values="0;20" dur="2s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  <!-- Labels -->
+  <text x="200" y="30" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="13" fill="#00d4ff" font-weight="bold">
+    Paquete de Ondas Gaussiano · TDSE
+  </text>
+  <text x="200" y="230" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10" fill="#7b2cbf" opacity="0.7">
+    ψ(x,t) = (2πσ²)⁻¹ᐟ⁴ exp[-(x-x₀-vt)²/4σ² + ik₀x - iωt]
+  </text>
+  <text x="30" y="120" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9" fill="#555" transform="rotate(-90,30,120)">
+    |ψ|²
+  </text>
+  <text x="200" y="215" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9" fill="#555">
+    x
+  </text>
+  <!-- Coming soon badge -->
+  <rect x="130" y="100" width="140" height="30" rx="5" fill="#1a1a2e" stroke="#ff006e" stroke-width="1.5" opacity="0.9"/>
+  <text x="200" y="122" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11" fill="#ff006e" font-weight="bold">
+    🚧 Manim Pending
+  </text>
+</svg>
