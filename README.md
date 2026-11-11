@@ -60,7 +60,7 @@ Mi herramienta principal es la **aproximación de masa efectiva** junto con **el
 ## 🐱 El gato de Schrödinger
 
 <div align="center">
-  <img src="assets/schrodinger_cat.svg" alt="Gato de Schrödinger en superposición entre vivo y muerto" width="560"/>
+  <img src="assets/gato-teleport.svg" alt="Gato de Schrödinger teletransportándose entre vivo, superposición y muerto" width="100%"/>
 </div>
 
 Un sistema cuántico no está en un estado ni en el otro: está en la **superposición** de ambos. Solo al medir se elige una rama. Es la misma idea que hay detrás de mis cálculos: no impongo dónde está el electrón, dejo que el Hamiltoniano decida.
