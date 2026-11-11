@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="1200" height="340" role="img" aria-label="(Parra)^2 — Daniel Parra, físico y simulaciones cuánticas">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#05060f"/>
+      <stop offset="55%" stop-color="#0b0a1f"/>
+      <stop offset="100%" stop-color="#120a2a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="50%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#f472b6"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#22d3ee" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#a78bfa" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0 L0 0 0 40" fill="none" stroke="#ffffff" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="340" fill="url(#bg)"/>
+  <rect width="1200" height="340" fill="url(#grid)"/>
+
+  <!-- halos -->
+  <circle cx="180" cy="110" r="180" fill="url(#glow)" opacity="0.25"/>
+  <circle cx="1030" cy="230" r="200" fill="url(#glow2)" opacity="0.25"/>
+
+  <!-- wavefunctions -->
+  <g opacity="0.55" filter="url(#soft)">
+    <g>
+      <path d="M-300 78 q75 -22 150 0 t150 0 t150 0 t150 0 t150 0 t150 0 t150 0 t150 0 t150 0"
+            fill="none" stroke="#22d3ee" stroke-width="1.6" stroke-opacity="0.55"/>
+      <animateTransform attributeName="transform" type="translate" values="0 0;300 0" dur="14s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <path d="M-300 262 q75 20 150 0 t150 0 t150 0 t150 0 t150 0 t150 0 t150 0 t150 0 t150 0"
+            fill="none" stroke="#a78bfa" stroke-width="1.6" stroke-opacity="0.5"/>
+      <animateTransform attributeName="transform" type="translate" values="0 0;-300 0" dur="18s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- floating particles -->
+  <g fill="#22d3ee">
+    <circle cx="120" cy="60" r="2"><animate attributeName="cy" values="60;40;60" dur="5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.2;1;0.2" dur="5s" repeatCount="indefinite"/></circle>
+    <circle cx="330" cy="40" r="1.5"><animate attributeName="cy" values="40;60;40" dur="4s" repeatCount="indefinite"/></circle>
+    <circle cx="900" cy="55" r="2"><animate attributeName="cy" values="55;35;55" dur="6s" repeatCount="indefinite"/></circle>
+  </g>
+  <g fill="#f472b6">
+    <circle cx="1080" cy="80" r="1.7"><animate attributeName="cy" values="80;60;80" dur="5.5s" repeatCount="indefinite"/></circle>
+    <circle cx="760" cy="30" r="1.4"><animate attributeName="cy" values="30;48;30" dur="4.5s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- orbital -->
+  <g transform="translate(600 170)" fill="none">
+    <ellipse rx="250" ry="78" stroke="url(#accent)" stroke-width="1" stroke-opacity="0.35" transform="rotate(-8)"/>
+    <ellipse rx="250" ry="78" stroke="url(#accent)" stroke-width="1" stroke-opacity="0.2" transform="rotate(34)"/>
+    <circle r="5" fill="#22d3ee">
+      <animateMotion dur="9s" repeatCount="indefinite" path="M250,0 A250,78 0 1,1 -250,0 A250,78 0 1,1 250,0"/>
+    </circle>
+  </g>
+
+  <!-- name -->
+  <g text-anchor="middle" font-family="'JetBrains Mono','Fira Code','DejaVu Sans Mono',monospace">
+    <text x="600" y="150" font-size="66" font-weight="700" fill="#e6edf3" letter-spacing="1">(Parra)<tspan fill="#22d3ee">²</tspan></text>
+    <text x="600" y="192" font-size="22" fill="#a78bfa" letter-spacing="3">DANIEL PARRA · FÍSICO</text>
+    <text x="600" y="226" font-size="15" fill="#94a3b8" letter-spacing="1.5">Simulaciones cuánticas · Elementos finitos · Python · LaTeX</text>
+  </g>
+
+  <!-- quantum dot chain -->
+  <g transform="translate(600 292)">
+    <line x1="-190" y1="0" x2="190" y2="0" stroke="#22d3ee" stroke-opacity="0.25" stroke-width="1"/>
+    <g fill="#0b0a1f" stroke="url(#accent)" stroke-width="1.6">
+      <circle cx="-180" cy="0" r="10"/>
+      <circle cx="-90" cy="0" r="10"/>
+      <circle cx="0" cy="0" r="10"/>
+      <circle cx="90" cy="0" r="10"/>
+      <circle cx="180" cy="0" r="10"/>
+    </g>
+    <circle r="4.5" fill="#22d3ee">
+      <animateMotion dur="6s" repeatCount="indefinite" path="M-180,0 L180,0 L-180,0"/>
+    </circle>
+    <circle r="16" fill="url(#glow)" opacity="0.35">
+      <animateMotion dur="6s" repeatCount="indefinite" path="M-180,0 L180,0 L-180,0"/>
+    </circle>
+  </g>
+
+  <rect x="0" y="0" width="1200" height="340" fill="none" stroke="url(#accent)" stroke-opacity="0.35" stroke-width="1.2"/>
+</svg>

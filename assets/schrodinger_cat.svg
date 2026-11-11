@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" role="img" aria-label="Gato de Schrödinger en superposición entre vivo y muerto">
+  <defs>
+    <linearGradient id="cbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#05060f"/>
+      <stop offset="100%" stop-color="#120a2a"/>
+    </linearGradient>
+    <linearGradient id="cg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="50%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#f472b6"/>
+    </linearGradient>
+    <filter id="cglow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="cglow2" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="caura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="cgrid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0 L0 0 0 32" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="640" height="420" rx="18" fill="url(#cbg)"/>
+  <rect width="640" height="420" rx="18" fill="url(#cgrid)"/>
+  <rect x="0.6" y="0.6" width="638.8" height="418.8" rx="18" fill="none" stroke="url(#cg)" stroke-opacity="0.35"/>
+
+  <!-- equation -->
+  <g text-anchor="middle" font-family="'JetBrains Mono','Fira Code','DejaVu Sans Mono',monospace">
+    <text x="320" y="52" font-size="24" fill="#e6edf3">|Ψ⟩ = α|vivo⟩ + β|muerto⟩</text>
+    <text x="320" y="80" font-size="14" fill="#94a3b8">|α|² + |β|² = 1</text>
+  </g>
+
+  <!-- box -->
+  <g>
+    <rect x="180" y="110" width="280" height="230" rx="14" fill="#0a0a18" fill-opacity="0.55" stroke="url(#cg)" stroke-width="1.6"/>
+    <rect x="180" y="110" width="280" height="230" rx="14" fill="none" stroke="#22d3ee" stroke-opacity="0.25" stroke-width="4" filter="url(#cglow2)"/>
+    <line x1="180" y1="134" x2="460" y2="134" stroke="url(#cg)" stroke-width="1" stroke-opacity="0.5"/>
+    <circle cx="198" cy="122" r="2.5" fill="#22d3ee" opacity="0.8"/>
+    <circle cx="210" cy="122" r="2.5" fill="#a78bfa" opacity="0.8"/>
+    <circle cx="222" cy="122" r="2.5" fill="#f472b6" opacity="0.8"/>
+    <text x="445" y="127" text-anchor="end" font-family="monospace" font-size="10" fill="#64748b" letter-spacing="1">CAJA AISLADA</text>
+  </g>
+
+  <!-- alive cat -->
+  <g opacity="1">
+    <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.42;0.5;0.92;1" dur="9s" repeatCount="indefinite"/>
+    <ellipse cx="320" cy="235" rx="105" ry="95" fill="url(#caura)"/>
+    <g fill="none" stroke="#22d3ee" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" filter="url(#cglow)">
+      <!-- ears -->
+      <path d="M288 196 L280 158 L312 180"/>
+      <path d="M352 196 L360 158 L328 180"/>
+      <!-- head -->
+      <circle cx="320" cy="204" r="36"/>
+      <!-- body -->
+      <path d="M292 240 C280 262 284 292 302 300 L338 300 C356 292 360 262 348 240"/>
+      <!-- tail -->
+      <path d="M352 286 C392 292 402 252 382 232"/>
+      <!-- paws -->
+      <path d="M302 300 q10 10 20 0"/>
+      <path d="M332 300 q10 10 20 0"/>
+    </g>
+    <!-- eyes -->
+    <g fill="#22d3ee">
+      <circle cx="308" cy="202" r="3.2"/>
+      <circle cx="332" cy="202" r="3.2"/>
+      <animate attributeName="opacity" values="1;1;0.35;0.35;1;1" keyTimes="0;0.34;0.36;0.38;0.40;1" dur="9s" repeatCount="indefinite"/>
+    </g>
+    <!-- nose + whiskers -->
+    <path d="M320 212 l-4 6 h8 z" fill="#22d3ee"/>
+    <g stroke="#22d3ee" stroke-opacity="0.55" stroke-width="1.2">
+      <line x1="284" y1="210" x2="268" y2="206"/>
+      <line x1="284" y1="216" x2="266" y2="218"/>
+      <line x1="356" y1="210" x2="372" y2="206"/>
+      <line x1="356" y1="216" x2="374" y2="218"/>
+    </g>
+    <text x="320" y="330" text-anchor="middle" font-family="monospace" font-size="13" fill="#22d3ee">|vivo⟩</text>
+  </g>
+
+  <!-- dead cat -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.42;0.5;0.92;1" dur="9s" repeatCount="indefinite"/>
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 -7;0 0" dur="4.5s" repeatCount="indefinite"/>
+      <ellipse cx="320" cy="235" rx="105" ry="95" fill="#a78bfa" fill-opacity="0.10"/>
+      <g fill="none" stroke="#a78bfa" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" filter="url(#cglow)">
+        <path d="M288 196 L280 158 L312 180"/>
+        <path d="M352 196 L360 158 L328 180"/>
+        <circle cx="320" cy="204" r="36"/>
+        <path d="M292 240 C280 262 284 292 302 300 L338 300 C356 292 360 262 348 240"/>
+        <path d="M352 286 C392 292 402 252 382 232"/>
+        <path d="M302 300 q10 10 20 0"/>
+        <path d="M332 300 q10 10 20 0"/>
+      </g>
+      <!-- X eyes -->
+      <g stroke="#a78bfa" stroke-width="2.6" stroke-linecap="round">
+        <line x1="303" y1="197" x2="313" y2="207"/>
+        <line x1="313" y1="197" x2="303" y2="207"/>
+        <line x1="327" y1="197" x2="337" y2="207"/>
+        <line x1="337" y1="197" x2="327" y2="207"/>
+      </g>
+      <text x="320" y="330" text-anchor="middle" font-family="monospace" font-size="13" fill="#a78bfa">|muerto⟩</text>
+    </g>
+  </g>
+
+  <!-- probability bar -->
+  <g>
+    <rect x="220" y="366" width="200" height="9" rx="4.5" fill="#1e293b"/>
+    <rect x="220" y="366" width="100" height="9" rx="4.5" fill="#22d3ee">
+      <animate attributeName="width" values="96;104;96" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="320" y="366" width="100" height="9" rx="4.5" fill="#a78bfa">
+      <animate attributeName="width" values="104;96;104" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <text x="220" y="394" font-family="monospace" font-size="11" fill="#22d3ee">|α|²</text>
+    <text x="420" y="394" text-anchor="end" font-family="monospace" font-size="11" fill="#a78bfa">|β|²</text>
+  </g>
+
+  <!-- measurement indicator -->
+  <g>
+    <circle cx="500" cy="300" r="5" fill="#f472b6">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="500" cy="300" r="14" fill="none" stroke="#f472b6" stroke-opacity="0.5">
+      <animate attributeName="r" values="6;20" dur="2.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <text x="500" y="330" text-anchor="middle" font-family="monospace" font-size="10" fill="#64748b">medir → colapso</text>
+  </g>
+</svg>
