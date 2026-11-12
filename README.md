@@ -1,13 +1,6 @@
 <div align="center">
-  <img src="assets/scene.svg?v=6" alt="Daniel Parra² — gato de Schrödinger" width="600"/>
+  <img src="assets/scene.svg?v=7" alt="Daniel Parra² — gato de Schrödinger" width="720"/>
 </div>
-
-<h2 align="center">Daniel Parra Parra</h2>
-
-<p align="center">
-  <b>Físico computacional y amante de la tecnología</b><br/>
-  Simulaciones cuánticas · Elementos finitos · Python · LaTeX
-</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-0d1117?style=flat-square&logo=python&logoColor=39D353" alt="Python"/>
@@ -23,27 +16,28 @@
 ### Sobre mí
 
 - Físico de la Universidad Industrial de Santander (UIS), grado en trámite.
-- Tesis de pregrado laureada (5.0).
+- Tesis de pregrado laureada.
 - Simulo sistemas cuánticos: ecuación de Schrödinger, masa efectiva y elementos finitos.
+- Docencia: 2+ años certificados (SEA-MIDAS, 398 h) y tutorías privadas de larga trayectoria.
 - Trabajo a diario en Debian con Python, LaTeX y Git.
-- Explorando ciencia de datos y machine learning.
+- Explorando ciencia de datos y AI for Science.
 
 ### Experiencia
 
-- **Tutor académico — SEA-MIDAS, UIS** (2024-2 a 2026-1): 398 horas de tutorías en Termodinámica y Física I-II-III.
-- **Auxiliar docente — Vicerrectoría Académica, UIS** (2024–2026).
+- **Teaching Assistant & Tutor — UIS (2024–2026).** SEA-MIDAS: 398 horas de tutorías en Termodinámica y Física I–III. Tutorías privadas de larga trayectoria.
+- **Auxiliar docente — Vicerrectoría Académica, UIS (2024–2026).**
 
 ### Educación
 
-- **Físico** — Universidad Industrial de Santander (grado en trámite).
-  Tesis laureada (5.0): *Efecto de una impureza donadora sobre las propiedades optoelectrónicas de una cadena lineal de puntos cuánticos*.
+- **BSc in Physics (UIS)** — grado en trámite.
+  **Laureate thesis:** *Efecto de una impureza donadora sobre las propiedades optoelectrónicas de una cadena lineal de puntos cuánticos*.
 
 ### Reconocimientos y certificados
 
-- Tesis de pregrado laureada (5.0) — UIS, 2026.
+- Laureate thesis — UIS, 2026.
 - Ponencia en el XXX Congreso Nacional de Física (2025).
 - GCI World 2026 — Data Science (en curso).
-- Constancia SEA-MIDAS: 398 horas de tutorías (2024–2026).
+- Certificado SEA-MIDAS: 398 horas de tutorías (2024–2026).
 
 ### Proyectos
 
