@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/scene.svg?v=4" alt="Daniel Parra² — gato de Schrödinger" width="600"/>
+  <img src="assets/scene.svg?v=5" alt="Daniel Parra² — gato de Schrödinger" width="600"/>
 </div>
 
 <h2 align="center">Daniel Parra Parra</h2>
