@@ -1,17 +1,6 @@
 <div align="center">
-  <img src="assets/portada.svg?v=1" alt="Daniel Parra² — gato de Schrödinger" width="720"/>
+  <img src="assets/portada-lite.svg" alt="Daniel Parra² — gato de Schrödinger" width="720"/>
 </div>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-0d1117?style=flat-square&logo=python&logoColor=39D353" alt="Python"/>
-  <img src="https://img.shields.io/badge/NumPy-0d1117?style=flat-square&logo=numpy&logoColor=39D353" alt="NumPy"/>
-  <img src="https://img.shields.io/badge/SciPy-0d1117?style=flat-square&logo=scipy&logoColor=39D353" alt="SciPy"/>
-  <img src="https://img.shields.io/badge/Matplotlib-0d1117?style=flat-square&logo=matplotlib&logoColor=39D353" alt="Matplotlib"/>
-  <img src="https://img.shields.io/badge/COMSOL%20FEM-0d1117?style=flat-square&logoColor=39D353" alt="COMSOL FEM"/>
-  <img src="https://img.shields.io/badge/LaTeX-0d1117?style=flat-square&logo=latex&logoColor=39D353" alt="LaTeX"/>
-  <img src="https://img.shields.io/badge/Debian-0d1117?style=flat-square&logo=debian&logoColor=39D353" alt="Debian"/>
-  <img src="https://img.shields.io/badge/Git-0d1117?style=flat-square&logo=git&logoColor=39D353" alt="Git"/>
-</p>
 
 ### Sobre mí
 
