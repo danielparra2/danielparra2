@@ -197,6 +197,52 @@
     <g transform="translate(950 0)">
       <g><animateTransform attributeName="transform" type="translate" values="0 -320;0 1520" dur="11s" begin="-8s" repeatCount="indefinite"/><use href="#matrixB"/></g>
     </g>
+
+    <!-- second rain layer (interleaved, fainter) -->
+    <g opacity="0.65">
+      <g transform="translate(75 0)">
+        <g><animateTransform attributeName="transform" type="translate" values="0 -320;0 1520" dur="12s" begin="-4s" repeatCount="indefinite"/><use href="#matrixB"/></g>
+      </g>
+      <g transform="translate(145 0)">
+        <g><animateTransform attributeName="transform" type="translate" values="0 -320;0 1520" dur="9s" begin="-7s" repeatCount="indefinite"/><use href="#matrixC"/></g>
+      </g>
+      <g transform="translate(215 0)">
+        <g><animateTransform attributeName="transform" type="translate" values="0 -320;0 1520" dur="15s" begin="-2s" repeatCount="indefinite"/><use href="#matrixA"/></g>
+      </g>
+      <g transform="translate(285 0)">
+        <g><animateTransform attributeName="transform" type="translate" values="0 -320;0 1520" dur="11s" begin="-9s" repeatCount="indefinite"/><use href="#matrixB"/></g>
+      </g>
+      <g transform="translate(355 0)">
+        <g><animateTransform attributeName="transform" type="translate" values="0 -320;0 1520" dur="13s" begin="-5s" repeatCount="indefinite"/><use href="#matrixC"/></g>
+      </g>
+      <g transform="translate(425 0)">
+        <g><animateTransform attributeName="transform" type="translate" values="0 -320;0 1520" dur="10s" begin="-1s" repeatCount="indefinite"/><use href="#matrixA"/></g>
+      </g>
+      <g transform="translate(495 0)">
+        <g><animateTransform attributeName="transform" type="translate" values="0 -320;0 1520" dur="14s" begin="-8s" repeatCount="indefinite"/><use href="#matrixB"/></g>
+      </g>
+      <g transform="translate(565 0)">
+        <g><animateTransform attributeName="transform" type="translate" values="0 -320;0 1520" dur="12s" begin="-3s" repeatCount="indefinite"/><use href="#matrixC"/></g>
+      </g>
+      <g transform="translate(635 0)">
+        <g><animateTransform attributeName="transform" type="translate" values="0 -320;0 1520" dur="9s" begin="-10s" repeatCount="indefinite"/><use href="#matrixA"/></g>
+      </g>
+      <g transform="translate(705 0)">
+        <g><animateTransform attributeName="transform" type="translate" values="0 -320;0 1520" dur="15s" begin="-6s" repeatCount="indefinite"/><use href="#matrixB"/></g>
+      </g>
+      <g transform="translate(775 0)">
+        <g><animateTransform attributeName="transform" type="translate" values="0 -320;0 1520" dur="11s" begin="-2s" repeatCount="indefinite"/><use href="#matrixC"/></g>
+      </g>
+      <g transform="translate(845 0)">
+        <g><animateTransform attributeName="transform" type="translate" values="0 -320;0 1520" dur="13s" begin="-7s" repeatCount="indefinite"/><use href="#matrixA"/></g>
+      </g>
+      <g transform="translate(915 0)">
+        <g><animateTransform attributeName="transform" type="translate" values="0 -320;0 1520" dur="10s" begin="-4s" repeatCount="indefinite"/><use href="#matrixB"/></g>
+      </g>
+      <g transform="translate(985 0)">
+        <g><animateTransform attributeName="transform" type="translate" values="0 -320;0 1520" dur="12s" begin="-9s" repeatCount="indefinite"/><use href="#matrixC"/></g>
+      </g>
+    </g>
   </g>
 
   <!-- aura behind the name -->
@@ -256,12 +302,42 @@
     <circle cx="420" cy="1390" r="1.5" opacity="0.10"><animate attributeName="opacity" values="0.15;0.03;0.15" dur="7.7s" repeatCount="indefinite"/></circle>
   </g>
 
-  <!-- equations, notebook-like annotations -->
-  <g font-family="'DejaVu Sans Mono','Courier New',monospace" fill="#39D353">
-    <text x="60" y="120" font-size="20" opacity="0.20">iħ ∂Ψ/∂t = ĤΨ</text>
-    <text x="60" y="148" font-size="13" opacity="0.13">|α|² + |β|² = 1</text>
-    <text x="940" y="120" text-anchor="end" font-size="18" opacity="0.18">|Ψ⟩ = α|vivo⟩ + β|muerto⟩</text>
-    <text x="940" y="148" text-anchor="end" font-size="12" opacity="0.12">Ĥ = −(ħ²/2m*)∇² + V(r) − e²/(4πε₀r) + eFx</text>
+  <!-- equations: physics wallpaper, visible background -->
+  <g font-family="'DejaVu Sans Mono','Courier New',monospace" fill="#8b949e">
+    <!-- top left -->
+    <text x="60" y="56" font-size="10" letter-spacing="3" opacity="0.42">SCHRÖDINGER</text>
+    <text x="60" y="84" font-size="20" fill="#39D353" opacity="0.46">iħ ∂Ψ/∂t = ĤΨ</text>
+    <text x="60" y="110" font-size="13" opacity="0.30">Ĥψ = Eψ</text>
+    <text x="60" y="134" font-size="13" opacity="0.28">Δx Δp ≥ ħ/2</text>
+    <!-- top right -->
+    <text x="940" y="56" text-anchor="end" font-size="10" letter-spacing="3" opacity="0.42">DIRAC</text>
+    <text x="940" y="84" text-anchor="end" font-size="18" fill="#39D353" opacity="0.46">(iħγ^μ∂_μ − mc)ψ = 0</text>
+    <text x="940" y="114" text-anchor="end" font-size="10" letter-spacing="3" opacity="0.42">SECOND LAW</text>
+    <text x="940" y="138" text-anchor="end" font-size="13" opacity="0.30">dS ≥ δQ/T</text>
+    <text x="940" y="160" text-anchor="end" font-size="13" opacity="0.28">ΔS_univ ≥ 0</text>
+    <!-- mid left -->
+    <text x="60" y="356" font-size="10" letter-spacing="3" opacity="0.42">NEWTON</text>
+    <text x="60" y="382" font-size="16" fill="#39D353" opacity="0.38">F = G m₁m₂/r²</text>
+    <text x="60" y="412" font-size="10" letter-spacing="3" opacity="0.42">MAXWELL</text>
+    <text x="60" y="436" font-size="13" opacity="0.30">∇·E = ρ/ε₀</text>
+    <text x="60" y="460" font-size="13" opacity="0.28">∇×B − (1/c²)∂E/∂t = μ₀J</text>
+    <!-- mid right -->
+    <text x="940" y="356" text-anchor="end" font-size="10" letter-spacing="3" opacity="0.42">POISSON</text>
+    <text x="940" y="382" text-anchor="end" font-size="16" fill="#39D353" opacity="0.38">−∇·(ε∇φ) = ρ</text>
+    <text x="940" y="412" text-anchor="end" font-size="10" letter-spacing="3" opacity="0.42">DIPOLE</text>
+    <text x="940" y="436" text-anchor="end" font-size="13" opacity="0.30">p = −∂E/∂F</text>
+    <text x="940" y="460" text-anchor="end" font-size="13" opacity="0.28">|Ψ⟩ = Σ c_n |n⟩</text>
+    <!-- bottom left -->
+    <text x="60" y="1088" font-size="10" letter-spacing="3" opacity="0.42">FINITE ELEMENTS</text>
+    <text x="60" y="1114" font-size="13" fill="#39D353" opacity="0.40">Ĥ = −(ħ²/2m*)∇² + V(r) − e²/(4πε₀ε_r r) + eFx</text>
+    <text x="60" y="1142" font-size="13" opacity="0.30">E_n = −Ry*/n²</text>
+    <text x="60" y="1168" font-size="12" opacity="0.26">Ry* = m*e⁴/(2(4πε₀ε_r)²ħ²)</text>
+    <!-- bottom right -->
+    <text x="940" y="1088" text-anchor="end" font-size="10" letter-spacing="3" opacity="0.42">EINSTEIN</text>
+    <text x="940" y="1114" text-anchor="end" font-size="15" fill="#39D353" opacity="0.42">Gμν + Λgμν = (8πG/c⁴)Tμν</text>
+    <text x="940" y="1146" text-anchor="end" font-size="10" letter-spacing="3" opacity="0.42">BOLTZMANN</text>
+    <text x="940" y="1172" text-anchor="end" font-size="13" opacity="0.30">S = k_B ln Ω</text>
+    <text x="940" y="1198" text-anchor="end" font-size="13" opacity="0.26">IPR = (Σ|ψ|⁴)/(Σ|ψ|²)²</text>
   </g>
 
   <!-- terminal prompt -->
